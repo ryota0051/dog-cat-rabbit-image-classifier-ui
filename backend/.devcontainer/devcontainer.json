@@ -1,0 +1,10 @@
+{
+  "name": "image_classifier_serve",
+  "forwardPorts": [8888],
+  "dockerFile": "../Dockerfile",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  }
+}

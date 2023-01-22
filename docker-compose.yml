@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./frontend/
+      args:
+        WORKDIR: "/app"
+    command: npm start
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/app/
+      - /app/node_modules
+    depends_on:
+      - backend
+  backend:
+    build: ./backend
+    ports:
+      - 8080:8080
